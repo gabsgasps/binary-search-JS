@@ -1,5 +1,18 @@
 let array = [2, 5, 8, 10, 15, 18, 20, 22, 24, 26, 38, 50, 90, 101];
 
+function case1() {
+  const target = 15;
+  const res = binarySearch(array, target);
+  console.log('CASE 1', res === 4);
+}
+
+function case2() {
+  const target = 30;
+  const res = binarySearch(array, target);
+
+  console.log('CASE 2', res === -1);
+}
+
 function binarySearch(array, target) {
   let lastPointer = array.length - 1;
   let initialPointer = 0;
@@ -28,7 +41,5 @@ function binarySearch(array, target) {
   }
 }
 
-// const res = binarySearch(array, 15);
-const res = binarySearch(array, 30);
-console.log('res', res);
-console.assert(res === 4, 'opa');
+case1();
+case2();
